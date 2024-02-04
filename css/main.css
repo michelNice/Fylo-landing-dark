@@ -1,0 +1,248 @@
+/*********************/
+/*SETTING GLOBAL*/
+/*********************/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 0.875rem;
+  font-family: "Raleway", sans-serif;
+  height: 100%;
+  background: hsl(217, 28%, 15%);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.row {
+  margin: 0 auto;
+  max-width: 71.875rem;
+}
+
+/*********************/
+/*NAVEGAION*/
+/*********************/
+.navbar {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .logo {
+  width: 6.25rem;
+  display: inline-block;
+}
+.navbar .main__nav {
+  padding: 0.063rem;
+}
+.navbar .main__nav li {
+  padding: 0 4rem;
+  float: left;
+}
+.navbar .main__nav li a {
+  font-size: 1rem;
+  transition: 0.3rem;
+  color: hsl(0, 0%, 100%);
+}
+.navbar .main__nav li a:hover {
+  border-bottom: 1px solid hsl(0, 0%, 100%);
+  transition: all 3s;
+}
+
+/*********************/
+/*HERO*/
+/*********************/
+.hero .hero__content {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("../images/bg-curvy-desktop.svg") bottom no-repeat;
+  background-size: 100% 300px;
+  padding: 0.625rem;
+}
+.hero .hero__content img {
+  width: 40.75rem;
+  display: block;
+  margin: 0 auto;
+}
+.hero .hero__content h1 {
+  font-size: 2rem;
+  width: 45%;
+  text-align: center;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+.hero .hero__content p {
+  width: 30%;
+  color: hsl(0, 0%, 100%);
+  margin: 2rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+.hero .hero__content .btn__global {
+  font-weight: bold;
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+  border-radius: 6.25rem;
+  background: linear-gradient(hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+  padding: 1rem 5rem;
+}
+
+.main__page {
+  position: relative;
+  background: hsl(218, 28%, 13%);
+  color: hsl(0, 0%, 100%);
+}
+
+/*********************/
+/*PRODUCT*/
+/*********************/
+.product {
+  padding: 2rem;
+}
+.product .product__plan {
+  text-align: center;
+  padding-top: 4rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.product .product__plan .product__item {
+  padding-top: 4rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.product .product__plan .product__item img {
+  width: 5rem;
+  padding: 1rem 0;
+}
+.product .product__plan .product__item p {
+  width: 63%;
+  padding: 2rem 0;
+  line-height: 1.7rem;
+}
+.product .product__plan .product__item h3 {
+  width: 900;
+  font-size: 1.3rem;
+}
+
+.productive .productive__showcase {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.productive .productive__showcase .productive__item {
+  padding-left: 2rem;
+}
+.productive .productive__showcase .productive__item img {
+  width: 34.375rem;
+}
+.productive .productive__showcase .productive__item:last-child h2 {
+  font-size: 2rem;
+}
+.productive .productive__showcase .productive__item:last-child p {
+  padding: 1.3rem 0;
+  line-height: 1.7rem;
+}
+.productive .productive__showcase .productive__item:last-child a {
+  color: hsl(176, 68%, 64%);
+  border-bottom: 1px solid hsl(176, 68%, 64%);
+  padding-bottom: 0.125rem;
+}
+.productive .productive__showcase .productive__item:last-child a img {
+  width: 1rem;
+  padding-top: 2rem;
+}
+
+/*********************/
+/*RESPOSIVE*/
+/*********************/
+@media (max-width: 48.5rem) {
+  .navbar {
+    padding: 2rem 1rem;
+  }
+  .navbar .main__nav li {
+    padding: 0;
+  }
+  .navbar .main__nav a {
+    padding: 0.313rem;
+  }
+  .hero .hero__content {
+    background: url("../images/bg-curvy-mobile.svg") bottom no-repeat;
+    background-size: 100% 150px;
+  }
+  .hero .hero__content img {
+    width: 100%;
+  }
+  .hero .hero__content h1 {
+    width: 100%;
+    line-height: 1.8rem;
+  }
+  .hero .hero__content p {
+    width: 100%;
+  }
+  .hero .hero__content .btn__global {
+    padding: 1rem 5rem;
+  }
+  .product {
+    padding: 2rem;
+  }
+  .product .product__plan {
+    padding-top: 3rem;
+    flex-direction: column;
+  }
+  .product .product__plan .product__item {
+    padding-top: 2rem;
+  }
+  .product .product__plan .product__item img {
+    padding-top: 3rem;
+  }
+  .product .product__plan .product__item p {
+    width: 100%;
+    padding: 2rem 0.3rem;
+  }
+  .productive .productive__showcase {
+    flex-direction: column;
+  }
+  .productive .productive__showcase .productive__item {
+    padding-left: 1rem;
+  }
+  .productive .productive__showcase .productive__item img {
+    width: 100%;
+  }
+  .productive .productive__showcase .productive__item:last-child h2 {
+    font-size: 1rem;
+  }
+  .productive .productive__showcase .productive__item:last-child p {
+    line-height: 1.7rem;
+  }
+  .productive .productive__showcase .productive__item:last-child a {
+    padding-bottom: 0.125rem;
+  }
+}
+@media (max-width: 18.063rem) {
+  .navbar .main__nav li a {
+    font-size: 0.8rem;
+  }
+  .navbar .logo {
+    width: 4.375rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
