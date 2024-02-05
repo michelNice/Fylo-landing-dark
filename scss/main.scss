@@ -186,42 +186,47 @@ img {
 }
 
 .productive {
-  .productive__showcase {
-    @include flex__column();
+  .productive__showcase{
+    @include flex__items();
+
+
+    .productive__item{
+      padding-left: 2rem;
+    }
+
+    .productive__item img{
+      width:37rem;
+    }
+
+    .productive__item:last-child h2{
+      font-size:2rem;
+    }
+
+    .productive__item:last-child p{
+        padding:1.3rem 0;
+        line-height: 1.5rem;
+    }
+
+    .productive__item:last-child{
+      .btn__conteiner{
+        display: inline-block;
+        border-bottom: 1px solid color(cyan_color);
+        color: color(cyan_color);
+        padding:0.2rem 0;
+        cursor: pointer;
+      }
+
+      .btn__conteiner span img{
+          width: 1rem;
+          margin-bottom: -4px;
+      }
+    }  
   }
 
-  .productive__showcase .productive__item {
-    padding-left: 2rem;
-
-    img {
-      width: 34.375rem;
-    }
-  }
-
-  .productive__showcase .productive__item:last-child {
-    h2 {
-      font-size: 2rem;
-    }
-    p {
-      padding: 1.3rem 0;
-      line-height: 1.7rem;
-    }
-
-    a {
-      color: color(cyan_color);
-      border-bottom: 1px solid color(cyan_color);
-      padding-bottom: 0.125rem;
-    }
-
-    a img {
-      width: 1rem;
-      padding-top: 2rem;
-    }
-  }
 }
 
 /*********************/
-/*RESPOSIVE*/
+    /*RESPOSIVE*/
 /*********************/
 @media (max-width: 48.5rem) {
   .navbar {
@@ -284,6 +289,7 @@ img {
     }
   }
 
+  
   .productive {
     .productive__showcase {
       @include flex__items();
@@ -291,26 +297,21 @@ img {
 
     .productive__showcase .productive__item {
       padding-left: 1rem;
-
-      img {
-        width: 100%;
-      }
+      img {width: 100%;}
     }
 
     .productive__showcase .productive__item:last-child {
-      h2 {
-        font-size: 1rem;
-      }
-      p {
-        line-height: 1.7rem;
-      }
-
-      a {
-        padding-bottom: 0.125rem;
-      }
+      h2 {font-size: 1rem;}
+      p {line-height: 1.7rem;}
+      a{padding-bottom: 0.125rem;}
     }
   }
+
+
+
 }
+  
+
 
 @media (max-width: 18.063rem) {
   .navbar {
