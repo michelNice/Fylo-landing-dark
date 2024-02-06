@@ -34,6 +34,9 @@ $colors: (
   color: color(white_color);
   border-radius: 6.25rem;
   background: linear-gradient(color(cyan_color), color(blue_color));
+  &:hover{
+    background: #0b1523;
+  }
 }
 
 * {
@@ -242,7 +245,7 @@ img {
   justify-items: center;
   z-index: 1;
   margin:0 auto;
-  padding:10em 0;
+  padding: 15rem 0;
   position:relative;
   max-width:69rem;
   z-index:1;
@@ -252,11 +255,11 @@ img {
     z-index:-1;
     max-width:10%;
     position: absolute;
-    top:6.875rem;
+    top:13rem;
   }
   .testimonial__conteiner{
     background:color(testimonial_bg);
-    padding:3rem 1rem;
+    padding:2.8rem 1rem;
     border-radius:0.188rem;
     box-shadow:0.188rem 0.188rem 0.188rem rgb(22, 21, 21);
     margin:0 1rem;
@@ -276,61 +279,131 @@ img {
   .testimonial__conteiner .txt__user{padding-bottom: 2rem;}
 
   .testimonial__conteiner .txt__user blockquote{
-      line-height:1.5rem;
+      line-height:1.3rem;
   }
 }
+/*********************/
+    /*SUBSCRIPTION*/
+/*********************/
+.subscription{
+  background:#1c2431;
+  max-width:48rem;
+  padding:1rem;
+  margin: 0 auto;
+  border-radius:0.6rem;
+  position: absolute;
+  left:0;
+  right:0;
+  bottom:-8rem;
+  .subscription__txt{
+      padding:1rem 0;
+  }
+
+  .subscription__txt h2{
+    padding:0.9rem 0;
+    text-align: center;
+    font-size:2rem;
+  }
+
+  .subscription__txt p{
+    line-height:1.5rem;
+    text-align: center;
+    width:90%;
+  }
+
+  .subscription__form{
+    display: flex;
+  }
+  
+  .subscription__form input[type=email]{
+      width:100%;
+      padding:1rem;
+      border-radius:3rem;
+  }
+
+  .subscription__form input[type=submit]{
+    background: linear-gradient(#65e2d9, #339ecc);
+    color: color(white_color);
+    border:0;
+    border-radius:6rem;
+    font-weight:bold;
+    margin-left:2rem;
+    cursor: pointer;
+    padding: 1rem 2rem;
+  }
+
+}
+/*********************/
+    /*FOOTER NAV*/
+/*********************/
 
 .footer{
-  padding:2rem 0;
+  padding:5rem 0;
   background: #0b1523;
+  color: color(white_color);
+   .footer__logo{
+    width:9rem;
+    padding-top: 10rem;
+  }
 
   .footer__main{
-    display:grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
+    justify-content:space-between;
     grid-gap:1rem;
-    margin-top:10rem;
   }
 
-  .footer__main .footer__item:nth-child(1) div,
-  .footer__item .footer__item:nth-child(3) div{
-      display:flex;
-      margin-top:1rem;
+  .footer__main .footer__item div,
+  .footer__main .footer__item:nth-child(1){
+    display: flex;
+    padding-top:1rem;
+
+  }
+  .footer__main .footer__item:nth-child(1)img,
+  .footer__main .footer__item:nth-child(2)div img{
+      margin-right:1rem;
+      width: 15px;height: 15px;
+  }
+   
+  .footer__main .footer__item:nth-child(3)ul li a,
+  .footer__main .footer__item:nth-child(4)ul li a{
+      color: color(white_color);
   }
 
-  .footer__main .footer__item:nth-child(3) ul{display: flex;}
 
-  .footer__main .footer__item:nth-child(3) ul li a i{
+   .footer__main .footer__item:nth-child(5) ul{display: flex;}
+
+   .footer__main .footer__item ul li{padding-top:1rem;}
+
+  .footer__main .footer__item:nth-child(5) ul li a i{
        text-align: center;
        border:1px solid color(white_color);
        transition:all 1s;
-       line-height: 2.2em;
-       font-size: 1.4rem;
+       line-height: 2em;
+       font-size: 1rem;
        color:color(white_color);
-       height:3rem;
-       width:3rem;
+       height:2rem;
+       width:2rem;
        border-radius: 50%;
-       margin-right:2rem;
+       margin-right:1rem;
   }
-  .footer__main .footer__item:nth-child(1) ul li,
-  .footer__main  .footer__item:nth-child(2) ul li{
-      padding:1rem;
-  }
+ 
 
   .footer__main .footer__item:nth-child(1) ul li a,
   .footer__main .footer__item:nth-child(2) ul li a{
     color: color(white_color);
   }
 
-  .footer__main .footer__item:nth-child(3)ul li a .fa-facebook-f:hover{
+  .footer__main .footer__item:nth-child(5)ul li a .fa-facebook-f:hover{
     background: #1877F2;
   }
-  .footer__main .footer__item:nth-child(3)ul li a .fa-twitter:hover{
+  .footer__main .footer__item:nth-child(5)ul li a .fa-twitter:hover{
     background: #1DA1F2;
   }
 
-  .footer__main .footer__item:nth-child(3) ul li a .fa-instagram:hover{
+  .footer__main .footer__item:nth-child(5) ul li a .fa-instagram:hover{
     background: #E4405F;
   }
+
 }
 
 
@@ -417,10 +490,6 @@ img {
   }
 
 
-
-
-
-  
 .testimonials > [class*="item"] {
    position: relative;
   font-size:0.9rem;
@@ -428,11 +497,11 @@ img {
 
 .testimonial{
   flex-direction: column;
-  padding:5em 0;
+  padding:15em 0;
   .testimonial__quote{
     height:30px;
     width:30px;
-    top:5.5rem;
+    top:13.9rem;
     left:10px;
   }
   .testimonial__conteiner{
@@ -440,29 +509,86 @@ img {
     margin:2rem;
   }
   
-
 }
 
-}
+.footer{
+  background: #0b1523;
 
+   .footer__logo{
+    padding-top: 10rem;
+    padding:0 1rem;
+  }
 
-
-
-
-
-
-
-
+  .footer__main{
+    display: flex;
+    flex-direction: column;
+    padding:0 1rem;
+  }
   
+
+  .footer__main .footer__item:nth-child(5){
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+ 
+
+}
+
+
+.subscription{
+  max-width:93%;
+  padding:1rem;
+  .subscription__txt{
+      padding:1rem 0;
+  }
+
+  .subscription__txt h2{
+    padding:0.9rem 0;
+    font-size:1rem;
+  }
+
+  .subscription__txt p{
+    line-height:1.5rem;
+    text-align: center;
+    width:100%;
+  }
+
+  .subscription__form{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .subscription__form input[type=email]{
+      width:100%;
+      padding:1rem;
+      border-radius:3rem;
+  }
+
+  .subscription__form input[type=submit]{
+    background: linear-gradient(#65e2d9, #339ecc);
+    color: color(white_color);
+    border:0;
+    border-radius:6rem;
+    font-weight:bold;
+    margin-left:0rem;
+    margin:1.5rem 0;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    width: 100%;
+  }
+
+}
+
+}
+
+@media(max-width:70rem){.footer{padding:13rem 0rem 1rem 0;}}
 
 
 @media (max-width: 18.063rem) {
   .navbar {
-    .main__nav li a {
-      font-size: 0.8rem;
-    }
-    .logo {
-      width: 4.375rem;
-    }
+    .main__nav li a {font-size: 0.8rem;}
+
+    .logo{width: 4.375rem;}
   }
 }

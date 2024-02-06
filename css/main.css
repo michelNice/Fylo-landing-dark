@@ -101,6 +101,9 @@ img {
   background: linear-gradient(hsl(176, 68%, 64%), hsl(198, 60%, 50%));
   padding: 1rem 5rem;
 }
+.hero .hero__content .btn__global:hover {
+  background: #0b1523;
+}
 
 .main__page {
   position: relative;
@@ -189,7 +192,7 @@ img {
   justify-items: center;
   z-index: 1;
   margin: 0 auto;
-  padding: 10em 0;
+  padding: 15rem 0;
   position: relative;
   max-width: 69rem;
   z-index: 1;
@@ -200,11 +203,11 @@ img {
   z-index: -1;
   max-width: 10%;
   position: absolute;
-  top: 6.875rem;
+  top: 13rem;
 }
 .testimonial .testimonial__conteiner {
   background: hsl(219, 30%, 18%);
-  padding: 3rem 1rem;
+  padding: 2.8rem 1rem;
   border-radius: 0.188rem;
   box-shadow: 0.188rem 0.188rem 0.188rem rgb(22, 21, 21);
   margin: 0 1rem;
@@ -223,54 +226,116 @@ img {
   padding-bottom: 2rem;
 }
 .testimonial .testimonial__conteiner .txt__user blockquote {
-  line-height: 1.5rem;
+  line-height: 1.3rem;
 }
 
+/*********************/
+/*SUBSCRIPTION*/
+/*********************/
+.subscription {
+  background: #1c2431;
+  max-width: 48rem;
+  padding: 1rem;
+  margin: 0 auto;
+  border-radius: 0.6rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8rem;
+}
+.subscription .subscription__txt {
+  padding: 1rem 0;
+}
+.subscription .subscription__txt h2 {
+  padding: 0.9rem 0;
+  text-align: center;
+  font-size: 2rem;
+}
+.subscription .subscription__txt p {
+  line-height: 1.5rem;
+  text-align: center;
+  width: 90%;
+}
+.subscription .subscription__form {
+  display: flex;
+}
+.subscription .subscription__form input[type=email] {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 3rem;
+}
+.subscription .subscription__form input[type=submit] {
+  background: linear-gradient(#65e2d9, #339ecc);
+  color: hsl(0, 0%, 100%);
+  border: 0;
+  border-radius: 6rem;
+  font-weight: bold;
+  margin-left: 2rem;
+  cursor: pointer;
+  padding: 1rem 2rem;
+}
+
+/*********************/
+/*FOOTER NAV*/
+/*********************/
 .footer {
-  padding: 2rem 0;
+  padding: 5rem 0;
   background: #0b1523;
+  color: hsl(0, 0%, 100%);
+}
+.footer .footer__logo {
+  width: 9rem;
+  padding-top: 10rem;
 }
 .footer .footer__main {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  justify-content: space-between;
   grid-gap: 1rem;
-  margin-top: 10rem;
 }
-.footer .footer__main .footer__item:nth-child(1) div,
-.footer .footer__item .footer__item:nth-child(3) div {
+.footer .footer__main .footer__item div,
+.footer .footer__main .footer__item:nth-child(1) {
   display: flex;
-  margin-top: 1rem;
+  padding-top: 1rem;
 }
-.footer .footer__main .footer__item:nth-child(3) ul {
+.footer .footer__main .footer__item:nth-child(1) img,
+.footer .footer__main .footer__item:nth-child(2) div img {
+  margin-right: 1rem;
+  width: 15px;
+  height: 15px;
+}
+.footer .footer__main .footer__item:nth-child(3) ul li a,
+.footer .footer__main .footer__item:nth-child(4) ul li a {
+  color: hsl(0, 0%, 100%);
+}
+.footer .footer__main .footer__item:nth-child(5) ul {
   display: flex;
 }
-.footer .footer__main .footer__item:nth-child(3) ul li a i {
+.footer .footer__main .footer__item ul li {
+  padding-top: 1rem;
+}
+.footer .footer__main .footer__item:nth-child(5) ul li a i {
   text-align: center;
   border: 1px solid hsl(0, 0%, 100%);
   transition: all 1s;
-  line-height: 2.2em;
-  font-size: 1.4rem;
+  line-height: 2em;
+  font-size: 1rem;
   color: hsl(0, 0%, 100%);
-  height: 3rem;
-  width: 3rem;
+  height: 2rem;
+  width: 2rem;
   border-radius: 50%;
-  margin-right: 2rem;
-}
-.footer .footer__main .footer__item:nth-child(1) ul li,
-.footer .footer__main .footer__item:nth-child(2) ul li {
-  padding: 1rem;
+  margin-right: 1rem;
 }
 .footer .footer__main .footer__item:nth-child(1) ul li a,
 .footer .footer__main .footer__item:nth-child(2) ul li a {
   color: hsl(0, 0%, 100%);
 }
-.footer .footer__main .footer__item:nth-child(3) ul li a .fa-facebook-f:hover {
+.footer .footer__main .footer__item:nth-child(5) ul li a .fa-facebook-f:hover {
   background: #1877F2;
 }
-.footer .footer__main .footer__item:nth-child(3) ul li a .fa-twitter:hover {
+.footer .footer__main .footer__item:nth-child(5) ul li a .fa-twitter:hover {
   background: #1DA1F2;
 }
-.footer .footer__main .footer__item:nth-child(3) ul li a .fa-instagram:hover {
+.footer .footer__main .footer__item:nth-child(5) ul li a .fa-instagram:hover {
   background: #E4405F;
 }
 
@@ -345,17 +410,76 @@ img {
   }
   .testimonial {
     flex-direction: column;
-    padding: 5em 0;
+    padding: 15em 0;
   }
   .testimonial .testimonial__quote {
     height: 30px;
     width: 30px;
-    top: 5.5rem;
+    top: 13.9rem;
     left: 10px;
   }
   .testimonial .testimonial__conteiner {
     padding: 3rem 1rem;
     margin: 2rem;
+  }
+  .footer {
+    background: #0b1523;
+  }
+  .footer .footer__logo {
+    padding-top: 10rem;
+    padding: 0 1rem;
+  }
+  .footer .footer__main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+  .footer .footer__main .footer__item:nth-child(5) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .subscription {
+    max-width: 93%;
+    padding: 1rem;
+  }
+  .subscription .subscription__txt {
+    padding: 1rem 0;
+  }
+  .subscription .subscription__txt h2 {
+    padding: 0.9rem 0;
+    font-size: 1rem;
+  }
+  .subscription .subscription__txt p {
+    line-height: 1.5rem;
+    text-align: center;
+    width: 100%;
+  }
+  .subscription .subscription__form {
+    display: flex;
+    flex-direction: column;
+  }
+  .subscription .subscription__form input[type=email] {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 3rem;
+  }
+  .subscription .subscription__form input[type=submit] {
+    background: linear-gradient(#65e2d9, #339ecc);
+    color: hsl(0, 0%, 100%);
+    border: 0;
+    border-radius: 6rem;
+    font-weight: bold;
+    margin-left: 0rem;
+    margin: 1.5rem 0;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    width: 100%;
+  }
+}
+@media (max-width: 70rem) {
+  .footer {
+    padding: 13rem 0rem 1rem 0;
   }
 }
 @media (max-width: 18.063rem) {
